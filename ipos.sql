@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.8.3
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2019 a las 20:52:50
--- Versión del servidor: 10.1.36-MariaDB
--- Versión de PHP: 7.2.10
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,14 +26,6 @@ CREATE TABLE `tbl_category` (
   `cat_name` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `tbl_category`
---
-
-INSERT INTO `tbl_category` (`cat_id`, `cat_name`) VALUES
-(6, 'Comida'),
-(4, 'Juguetes'),
-(5, 'Ropa');
 
 -- --------------------------------------------------------
 
@@ -58,15 +43,7 @@ CREATE TABLE `tbl_invoice` (
   `due` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `tbl_invoice`
---
-
-INSERT INTO `tbl_invoice` (`invoice_id`, `cashier_name`, `order_date`, `time_order`, `total`, `paid`, `due`) VALUES
-(94, 'configuroweb', '2019-12-10', '18:08', 125000, 125000, 0),
-(95, 'configuroweb', '2019-12-12', '00:15', 300000, 300000, 0);
-
--- --------------------------------------------------------
+-------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `tbl_invoice_detail`
@@ -84,14 +61,7 @@ CREATE TABLE `tbl_invoice_detail` (
   `order_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `tbl_invoice_detail`
---
-
-INSERT INTO `tbl_invoice_detail` (`id`, `invoice_id`, `product_id`, `product_code`, `product_name`, `qty`, `price`, `total`, `order_date`) VALUES
-(137, 94, 23, 'JJAA11', 'Paw Pattrol', 95, 25000, 125000, '2019-12-10');
-
--- --------------------------------------------------------
+---------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `tbl_product`
@@ -111,14 +81,7 @@ CREATE TABLE `tbl_product` (
   `img` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `tbl_product`
---
-
-INSERT INTO `tbl_product` (`product_id`, `product_code`, `product_name`, `product_category`, `purchase_price`, `sell_price`, `stock`, `min_stock`, `product_satuan`, `description`, `img`) VALUES
-(23, 'JJAA11', 'Paw Pattrol Ambulancia 3+', 'Juguetes', 120000, 25000, 83, 10, 'N/A', 'Paw Pattrol Ambulancia 3+, Serie Completa', '5df0255ea0636.jpg');
-
--- --------------------------------------------------------
+-------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `tbl_satuan`
@@ -134,8 +97,7 @@ CREATE TABLE `tbl_satuan` (
 --
 
 INSERT INTO `tbl_satuan` (`kd_satuan`, `nm_satuan`) VALUES
-(19, 'Kilo'),
-(18, 'Libra'),
+(19, 'Kg'),
 (20, 'N/A');
 
 -- --------------------------------------------------------
@@ -158,8 +120,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `username`, `fullname`, `password`, `role`, `is_active`) VALUES
-(7, 'configuroweb', 'Mauricio Sevilla Britto', '1234abcd.abcd', 'Admin', 1),
-(8, 'operador', 'operador', '1234abcd..', 'Operator', 1);
+(7, 'admin', 'Admin', 'admin', 'Admin', 1),
+(8, 'operator', 'empleado', 'empleado', 'Operator', 1);
 
 --
 -- Índices para tablas volcadas
