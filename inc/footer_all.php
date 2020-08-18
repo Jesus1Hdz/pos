@@ -2,10 +2,10 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      ConfiguroWeb|POS Ver. 1.5
+      |POS Ver. 1.5
     </div>
     <!-- Default to the left -->
-    <strong>Mauricio Sevilla</a>.</strong> Configuroweb
+    <strong>Punto de venta</a>.</strong> 2020
   </footer>
 </div>
 <!-- ./wrapper -->

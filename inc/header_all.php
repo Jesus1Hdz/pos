@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>POS | ConfiguroWeb</title>
+  <title>POS | Punto de venta</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="shortcut icon" href="img/logo1.jpg">
@@ -61,11 +61,11 @@
     <header class="main-header">
 
       <!-- Logo -->
-      <a href="https://www.configuroweb.com/contacto/" class="logo">
+      <a href="#" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>POS</b></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>ConfiguroWeb|</b>POS</span>
+        <span class="logo-lg"><b>-|</b>POS</span>
       </a>
 
       <!-- Header Navbar -->

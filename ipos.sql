@@ -1,7 +1,13 @@
-
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: localhost
+-- Tiempo de generación: 18-08-2020 a las 06:06:16
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -26,6 +32,13 @@ CREATE TABLE `tbl_category` (
   `cat_name` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `tbl_category`
+--
+
+INSERT INTO `tbl_category` (`cat_id`, `cat_name`) VALUES
+(8, 'Bebidas'),
+(9, 'Lacteos');
 
 -- --------------------------------------------------------
 
@@ -43,7 +56,7 @@ CREATE TABLE `tbl_invoice` (
   `due` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--------------------------------------------------------
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `tbl_invoice_detail`
@@ -61,7 +74,7 @@ CREATE TABLE `tbl_invoice_detail` (
   `order_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
----------------------------------------------------
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `tbl_product`
@@ -81,7 +94,7 @@ CREATE TABLE `tbl_product` (
   `img` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--------------------------------------------------
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `tbl_satuan`
@@ -120,8 +133,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `username`, `fullname`, `password`, `role`, `is_active`) VALUES
-(7, 'admin', 'Admin', 'admin', 'Admin', 1),
-(8, 'operator', 'empleado', 'empleado', 'Operator', 1);
+(10, 'admin', 'Admin', 'admin', 'Admin', 1);
 
 --
 -- Índices para tablas volcadas
@@ -175,13 +187,13 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT de la tabla `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_invoice`
 --
 ALTER TABLE `tbl_invoice`
-  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_invoice_detail`
@@ -193,19 +205,19 @@ ALTER TABLE `tbl_invoice_detail`
 -- AUTO_INCREMENT de la tabla `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_satuan`
 --
 ALTER TABLE `tbl_satuan`
-  MODIFY `kd_satuan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `kd_satuan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

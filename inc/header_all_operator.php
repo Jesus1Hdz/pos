@@ -68,7 +68,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>POS</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>ConfiguroWeb|</b>POS</span>
+      <span class="logo-lg"><b>|</b>POS</span>
     </a>
 
     <!-- Header Navbar -->
